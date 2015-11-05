@@ -1,0 +1,12 @@
+<?php get_header(); ?>
+
+		<div class="content_container">
+			<?php if (have_posts()) : while (have_posts()) : the_post();
+				get_template_component('breadcrumbs');
+				the_content();
+			endwhile; else:
+			endif;
+			?>
+		</div>
+			
+<?php get_footer(); ?>
