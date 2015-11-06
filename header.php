@@ -31,8 +31,48 @@
 				<div class="clearfix"></div>
 			</div>
 			<div class="navigation_container">
+				<div id="menu-button">
+					<a class="mobile-menu-btn" href="#">
+						<div class="menu-btn-bar-container">
+							<span class="menu-btn-bar"></span>
+							<span class="menu-btn-bar"></span>
+							<span class="menu-btn-bar"></span>
+						</div>
+						<span class="menu-btn-text">MENU</span>
+					</a>
+				</div>
+				
 				<div class="main-navigation">
 					<?php
+						add_filter('wp_nav_menu_objects', 'add_menu_parent_class');
+						
+						function add_menu_parent_class($items) {
+							/*
+echo '<pre>';
+							var_dump($items);
+*/
+							foreach ($items as &$item) {
+								if (hasSub($item->ID, $items)) {
+									$title = $item->title;
+									$item->title = $title . '</a><a class="sub-menu-button" href="#">';
+								}
+							}
+							return $items;    
+						}
+						
+						function hasSub($menu_item_id, $items) {
+							foreach ($items as $item) {
+								if ($item->menu_item_parent && $item->menu_item_parent==$menu_item_id) {
+									return true;
+								}
+							}
+							return false;
+						};
+						
+						
+						
+						
+						
 						$navMain_settings = array(
 							'theme_location'  => 'main-menu',
 							'container'       => 'div',
@@ -40,6 +80,7 @@
 							'echo'            => true,
 							'fallback_cb'     => 'wp_page_menu',
 							'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+							'after'			  => '<div class="clearfix"></div>',
 							'depth'           => 0,
 						);
 						

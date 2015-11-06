@@ -14,7 +14,7 @@ if (!empty($_POST['newsletter-email'])) {
 	<form method="post" action="<?php echo get_the_permalink($post->ID); ?>" id="newsletter-form">
 		<label for="newsletter-email">Sign up for our Newsletter</label>
 		<input type="email" id="newsletter-email" name="newsletter-email" placeholder="Email Address">
-		<input type="submit" id="newsletter-submit" name="newsletter-submit" value="SIGN UP">
+		<input type="submit" id="newsletter-submit" name="newsletter-submit" class="button" value="SIGN UP">
 	</form>
 	<?php
 }

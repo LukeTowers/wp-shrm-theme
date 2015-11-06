@@ -49,7 +49,7 @@ if (!function_exists('display_pagination')) {
 		if (!empty($paginate_links)) {
 			echo "<ul class='pagination'>";
 				foreach ($paginate_links as $page_link) {
-					if (!empty(strpos($page_link, 'current'))) { $class = 'active custom_colour'; } else { $class = ""; }
+					if (!empty(strpos($page_link, 'current'))) { $class = 'active'; } else { $class = ""; }
 					echo '<li class="'.@$class.'">' . $page_link . '</li>';
 				}
 			echo "</ul>";
@@ -71,7 +71,7 @@ if (!function_exists('display_pagination')) {
 		background-image: none !important;
 		background-color: #333;
 		border-radius: 3px;
-	    color: #fff;
+	    color: white;
 	    display: inline-block;
 	    margin: 0px 10px 10px 0px;
 	}
@@ -83,9 +83,12 @@ if (!function_exists('display_pagination')) {
 		border-radius: 3px;
 	}
 	
-	.pagination a:hover {
-		color: white;
-		background-color: #005595;
+	.pagination a:hover,
+	.pagination .current {
+		color: white !important;
+		color: #643B2B !important;
+		background-color: #0D6D97;
+		background-color: #C8BDA1;
 	}
 </style>
 

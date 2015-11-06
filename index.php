@@ -7,6 +7,7 @@
 			endwhile; else:
 			endif;
 			?>
+			<div class="clearfix"></div>
 		</div>
 			
 <?php get_footer(); ?>

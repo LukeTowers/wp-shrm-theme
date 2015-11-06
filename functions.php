@@ -55,3 +55,12 @@ require_once(SHRM_2016_TEMPLATE_PATH . 'includes/modules/template-parts/template
 //************************************************************************************************
 
 require_once(SHRM_2016_TEMPLATE_PATH . 'includes/modules/widget-areas.php');
+
+
+
+//************************************************************************************************
+// Section: 		Metaboxes
+// Description:		Module that handles the theme's metaboxes
+//************************************************************************************************
+
+require_once(SHRM_2016_TEMPLATE_PATH . 'includes/modules/metaboxes.php');
