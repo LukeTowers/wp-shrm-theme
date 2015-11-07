@@ -36,7 +36,7 @@ $post_backup = null;
 								<?php 
 									$image = wp_get_attachment_image_src(get_post_thumbnail_id($event->ID), 'medium');
 									if (empty($image[0])) {
-										$image[0] = SHRM_2016_TEMPLATE_URL . '/includes/images/event-default-rectangle.jpg';
+										$image[0] = SHRM_2016_TEMPLATE_URL . '/includes/images/default-placeholder.png';
 									}
 									echo '<span class="image-content rectangle" style="background-image: url(\'' . $image[0] . '\');"></span>';
 								?>

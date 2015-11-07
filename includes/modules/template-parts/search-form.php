@@ -5,10 +5,8 @@
 //************************************************************************************************
 ?>
 <div class="inline_search_container">
-	<form action="/" method="get" class="search_form">
-		<input type="submit" class="search_button">
-		<span class="search_input">
-			<input type="text" placeholder="Search..." name="s" id="s">
-		</span>
+	<form action="/" method="get" class="search-form">
+		<input type="text" placeholder="Search..." name="s" class="search-input">
+		<input type="submit" id="search-submit" class="button search-submit" value="Search">
 	</form>
 </div> <!-- Search Container -->

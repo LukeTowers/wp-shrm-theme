@@ -8,8 +8,8 @@
 							'title'	=>	get_the_title(),
 							'url'	=>	get_the_permalink(),
 							'parent'=>	array(
-								'title'	=>	'Staff',
-								'url'	=>	'/staff/',
+								'title'	=>	'Executive',
+								'url'	=>	'/about-us/staff/',
 							),
 						),
 					)); 
@@ -19,7 +19,7 @@
 					<?php if (has_post_thumbnail()) { ?>
 						<div class="staff-picture">
 							<?php 
-								$image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full');
+								$image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'medium');
 								echo '<span class="image-content circle" style="background-image: url(\'' . $image[0] . '\');"></span>';
 							?>
 						</div>

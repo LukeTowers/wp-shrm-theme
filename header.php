@@ -22,7 +22,7 @@
 			<div class="site-header">
 				<div class="logo_container">
 					<a href="/" id="site-logo">
-						<img src="<?php echo SHRM_2016_TEMPLATE_URL . '/includes/images/logo.jpg'; ?>" alt="SHRM logo">
+						<img src="<?php echo SHRM_2016_TEMPLATE_URL . '/includes/images/shrm-logo.png'; ?>" alt="SHRM logo" style="width: 546px; height: auto;">
 					</a>
 				</div>
 				<div class="header-right">
@@ -47,10 +47,6 @@
 						add_filter('wp_nav_menu_objects', 'add_menu_parent_class');
 						
 						function add_menu_parent_class($items) {
-							/*
-echo '<pre>';
-							var_dump($items);
-*/
 							foreach ($items as &$item) {
 								if (hasSub($item->ID, $items)) {
 									$title = $item->title;
@@ -68,10 +64,6 @@ echo '<pre>';
 							}
 							return false;
 						};
-						
-						
-						
-						
 						
 						$navMain_settings = array(
 							'theme_location'  => 'main-menu',
@@ -92,7 +84,7 @@ echo '<pre>';
 			
 			<?php
 				if (is_front_page()) {
-					get_template_component('home-slider');
+					dynamic_sidebar('home-slider-area');
 				}
 			?>
 			

@@ -10,7 +10,7 @@ $stylesheets = array();
 add_action('wp', 'load_styles_as_required');
 function load_styles_as_required($wp) {
 	// Run functions to check for additional css to include
-	include_fusion_slider();
+	do_action('load_resources_if_required');
 }
 
 // Add the editor styles
@@ -54,13 +54,6 @@ add_action('header_scripts', 'add_typekit_fonts');
 
 
 /* COMPONENT CHECKING FUNCTIONS */
-function include_fusion_slider() {
-	global $stylesheets;
-	$stylesheets[] = 'fusion-slider';
-}
-
-
-
 /*
 function check_for_events() {
 	$posttype = get_post_type();

@@ -5,7 +5,7 @@ Author: Fusion Online
 Author URI: http://fusiononline.ca
 Description: This is a responsive theme designed for Souls Harbour Rescue Mission. Non-authorized use prohibited.
 Template Prefix: SHRM_2016 (Souls Harbour Rescue Mission 2016)
-Version: 0.1
+Version: 0.2
 =============================================================================================*/
 
 /******************************************************************************************************
@@ -101,10 +101,7 @@ a {
 }
 
 
-
-
 .navigation_container, .sub-menu { background-color: #C8BDA1; }
-
 
 .mobile-menu-btn {
 	display: block;
@@ -168,7 +165,10 @@ ul.main-menu {
 	width: 100%;
 }
 
-.main-menu li { display: block; }
+.main-menu li { 
+	display: block;
+	vertical-align: middle;
+}
 
 .main-menu a {
 	display: block;
@@ -213,40 +213,19 @@ ul.main-menu {
 }
 .sub-menu-button.active { 
 /* 	background-image: url("includes/images/menu-arrow-up.png");  */
-	 transform: rotate(-180deg);
-	-moz-transform: rotate(-180deg);
-	-webkit-transform: rotate(-180deg);
+	-moz-transform: rotate(180deg);
+	-webkit-transform: rotate(180deg);
+	transform: rotate(180deg);
 }
 
 
 
 .shadow_container {
 	max-width: 1024px;
+	word-wrap: break-word;
 	margin: 0 auto;
 	position: relative;
 }
-
-/*
-.shadow_container:before {
-	box-shadow: -10px 0 13px -15px inset;
-	content: " ";
-	height: 100%;
-	position: absolute;
-	left: -15px;
-	top: 0;
-	width: 15px;
-}
-
-.shadow_container:after {
-	box-shadow: 10px 0 13px -15px inset;
-	content: " ";
-	height: 100%;
-	position: absolute;
-	right: -15px;
-	top: 0;
-	width: 15px;
-}
-*/
 
 .content_container {
 	padding: 7px 15px 30px;
@@ -368,7 +347,6 @@ ul.main-menu {
 .footer-column-1-widget,
 .footer-column-3-widget {
 	display: inline-block;
-	text-align: left;
 }
 
 .footer-column-2-widget { text-align: left; }
@@ -400,7 +378,7 @@ ul.main-menu {
 	margin: 0 auto;
 }
 
-#search-input {
+.search-input {
 	font-size: 1em;
 	padding: 7px;
 	font-family: "abril-text", sans-serif;
@@ -409,13 +387,22 @@ ul.main-menu {
 	color: black;
 }
 
-#search-submit {
+.search-submit {
 	font-size: 1em;
 	font-weight: bold;
 	position: absolute;
 	right: 0px;
 	top: 0px;
 }
+
+.inline_search_container .search-form {
+	width: 100% !important;
+}
+
+.inline_search_container .search-input {
+	width: 95% !important;
+}
+
 
 .footer-credits {
 	background-color: #333333;
@@ -592,7 +579,7 @@ ul.main-menu {
 	
 	.sub-menu {
 		position: absolute;
-		z-index: 10;
+		z-index: 99999;
 		left: 50%;
 		margin-left: -100px !important;
 		width: 200px;
@@ -629,6 +616,11 @@ ul.main-menu {
 	.single-staff .staff-picture {
 		float: none;
 	}
+	
+	.single-staff {
+		max-width: 1024px;
+		margin: 0 auto;
+	}
 		
 	.single-staff .staff_container {
 		display: block;
@@ -641,6 +633,15 @@ ul.main-menu {
 		float: left;
 		width: 33.3%;
 		margin: 0px !important;
+	}
+	
+	
+	.footer-column {
+		text-align: left;
+	}
+	
+	.footer-column:nth-child(3) {
+		text-align: right;
 	}
 	
 	.privacy-policy,
