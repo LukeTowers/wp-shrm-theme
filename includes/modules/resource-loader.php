@@ -17,7 +17,7 @@ function load_styles_as_required($wp) {
 function load_editor_styles() {
 	add_editor_style(SHRM_2016_TEMPLATE_URL . '/includes/css/editor.css');
 }
-// add_action('admin_init', 'load_editor_styles');
+add_action('admin_init', 'load_editor_styles');
 
 
 
@@ -50,6 +50,7 @@ function add_typekit_fonts() {
 	echo '<script>try{Typekit.load({ async: true });}catch(e){}</script>';
 }
 add_action('header_scripts', 'add_typekit_fonts');
+add_action('admin_head', 'add_typekit_fonts');
 
 
 

@@ -64,3 +64,12 @@ require_once(SHRM_2016_TEMPLATE_PATH . 'includes/modules/widget-areas.php');
 //************************************************************************************************
 
 require_once(SHRM_2016_TEMPLATE_PATH . 'includes/modules/metaboxes.php');
+
+
+
+//************************************************************************************************
+// Section: 		Shortcodes
+// Description:		Module that handles the theme's shortcodes
+//************************************************************************************************
+
+require_once(SHRM_2016_TEMPLATE_PATH . 'includes/modules/shortcodes.php');

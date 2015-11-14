@@ -8,41 +8,67 @@ if (!function_exists('display_pagination')) {
 	function display_pagination($max_num_pages = '', $current_page = '') {
 		global $template_component_args;
 		
-		if (empty($max_num_pages)) {
-			$max_num_pages = @$template_component_args['max_num_pages'];
+		if (@$template_component_args['search-page']) {
+			global $wp_query;
+			
+			$max_results = 999999999;
+			
+			$pagination_args = array(
+				'base'		=>	str_replace($max_results, '%#%', esc_url(get_pagenum_link($max_results))),
+				'format'	=>	'?page=%#%',
+				'current'	=>	max(1, get_query_var('paged')),
+				'total' => $wp_query->max_num_pages,
+				'show_all'        => false,
+				'end_size'        => 1,
+				'mid_size'        => 2,
+				'prev_next'       => true,
+				'prev_text'       => '&larr; Previous',
+				'next_text'       => 'Next &rarr;',
+				'type'            => 'array',
+			);
+		} else {
 			if (empty($max_num_pages)) {
-				global $wp_query;
-				$max_num_pages = $wp_query->max_num_pages;
+				$max_num_pages = @$template_component_args['max_num_pages'];
 				if (empty($max_num_pages)) {
-					$max_num_pages = 1;
+					global $wp_query;
+					$max_num_pages = $wp_query->max_num_pages;
+					if (empty($max_num_pages)) {
+						$max_num_pages = 1;
+					}
 				}
 			}
-		}
-		
-		if (empty($current_page)) {
-			$current_page = @$template_component_args['current_page'];
+			
 			if (empty($current_page)) {
-				$current_page = (get_query_var('paged')) ? get_query_var('paged') : 1;
+				$current_page = @$template_component_args['current_page'];
 				if (empty($current_page)) {
-					$current_page = 1;
+					$current_page = (get_query_var('paged')) ? get_query_var('paged') : 1;
+					if (empty($current_page)) {
+						$current_page = 1;
+					}
 				}
 			}
+			
+			$pagination_args = array(
+				'base'            => get_pagenum_link(1) . '%_%',
+				'format'          => 'page/%#%',
+				'total'           => $max_num_pages,
+				'current'         => $current_page,
+				'show_all'        => false,
+				'end_size'        => 1,
+				'mid_size'        => 2,
+				'prev_next'       => true,
+				'prev_text'       => '&larr; Previous',
+				'next_text'       => 'Next &rarr;',
+				'type'            => 'array',
+			);
 		}
 		
-		
-		$pagination_args = array(
-			'base'            => get_pagenum_link(1) . '%_%',
-			'format'          => 'page/%#%',
-			'total'           => $max_num_pages,
-			'current'         => $current_page,
-			'show_all'        => false,
-			'end_size'        => 1,
-			'mid_size'        => 2,
-			'prev_next'       => true,
-			'prev_text'       => '&larr; Previous',
-			'next_text'       => 'Next &rarr;',
-			'type'            => 'array',
-		);
+		if (@$template_component_args['event-page']) {
+			// Modify the format of the pagination links to remove the event-type query from the base pagination link, and then add it to the end of the generated pagination link
+			// so that it still works. Note, users can still add other query args to the request and those will break this, but because the url is being escaped, there isn't a concern
+			// of this becoming an attack vector.
+			$pagination_args['base'] = esc_url(add_query_arg('event-type', get_query_var('event-type'), remove_query_arg('event-type', get_pagenum_link(1)) . '%_%'));
+		}
 		
 		$paginate_links = paginate_links($pagination_args);
 		
@@ -85,9 +111,7 @@ if (!function_exists('display_pagination')) {
 	
 	.pagination a:hover,
 	.pagination .current {
-		color: white !important;
 		color: #643B2B !important;
-		background-color: #0D6D97;
 		background-color: #C8BDA1;
 	}
 </style>

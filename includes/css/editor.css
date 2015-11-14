@@ -1,0 +1,51 @@
+body { font-family: "abril-text", sans-serif; }
+
+h1, h2, h3, h4, h5, h6 { font-family: "abril-titling", sans-serif; }
+
+a {
+	text-decoration: none;
+	color: #006C99;
+}
+
+img { max-width: 100% !important; height: auto !important; }
+
+.button {
+	border: none;
+	padding: 7px 15px;
+	background-color: #CEC91C;
+	color: white;
+	font-family: "abril-text", sans-serif;
+	font-weight: bold;
+}
+hr {
+	margin: 30px 0px;
+	border: none;
+	border-radius: 7px;
+	height: 3px;
+	background-color: #C8BDA1;
+}
+
+.content_container img { border-radius: 7px; }
+.circle { border-radius: 50% !important; }
+.rectangle { border-radius: 7px !important; }
+.square { border-radius: 0px !important; }
+
+
+.gallery-item img { 
+	border: none !important;
+	border-radius: 7px !important; 
+}
+
+.gallery-columns-3 .gallery-item {
+	width: 31% !important;
+	margin: 10px 1% !important;
+}
+
+.gallery-columns-4 .gallery-item {
+	width: 23% !important;
+	margin: 10px 1% !important;
+}
+
+
+.clearfix { clear: both; }
+.hidden-text { display: none; }

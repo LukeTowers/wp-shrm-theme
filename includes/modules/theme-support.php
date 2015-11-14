@@ -17,3 +17,10 @@ function register_theme_menus() {
   );
 }
 add_action( 'init', 'register_theme_menus' );
+
+
+function add_event_type_query_var($vars) {
+	$vars[] = 'event-type';
+	return $vars;
+}
+add_filter('query_vars', 'add_event_type_query_var');

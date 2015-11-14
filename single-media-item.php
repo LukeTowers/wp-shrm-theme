@@ -2,17 +2,8 @@
 
 		<div class="content_container single-media-item">
 			<?php if (have_posts()) : while (have_posts()) : the_post();
-				get_template_component('breadcrumbs', array(
-					'breadcrumb-override'	=>	array(
-						'title'	=>	get_the_title(),
-						'url'	=>	get_the_permalink(),
-						'parent'=>	array(
-							'title'	=>	'Media Room',
-							'url'	=>	'/about-us/media-room/',
-						),
-					),
-				));
-			
+				get_template_component('breadcrumbs');
+				get_template_component('meta-date');
 				the_content();
 			endwhile; else:
 			endif;

@@ -1,30 +1,27 @@
 <?php get_header(); ?>
 
-		<div class="content_container page-cup-of-joe">	
+		<div class="content_container page-archive">	
 			<?php 
 				get_template_component('breadcrumbs', array(
 					'breadcrumb-override'	=>	array(
-						'title'	=>	'Cup of Joe',
-						'url'	=>	'/cup-of-joe/',
+						'title'	=>	'Archive',
+						'url'	=>	'',
 						'parent'=>	array(
-							'title'	=>	'Blog',
-							'url'	=>	'/blog/',
+							'title'	=>	'Home',
+							'url'	=>	'/',
 						),
 					),
 				));
-			?>			
-			<?php get_template_component('author-joe'); ?>
-			
-			<hr>
-			
+			?>
+				
 			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 				<div class="post_container">
 					<div class="post-picture">
 						<a href="<?php echo get_the_permalink(); ?>">
 							<?php 
-								$image = wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), 'medium');
+								$image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'medium');
 								if (empty($image[0])) {
-									$image[0] = SHRM_2016_TEMPLATE_URL . '/includes/images/cup-of-joe.jpg';
+									$image[0] = SHRM_2016_TEMPLATE_URL . '/includes/images/default-placeholder.png';
 								}
 								echo '<span class="image-content rectangle" style="background-image: url(\'' . $image[0] . '\');"></span>';
 							?>
