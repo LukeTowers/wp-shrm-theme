@@ -26,11 +26,13 @@
 
 <div class="entry-meta eventorganiser-event-meta">
 	<!-- Choose a different date format depending on whether we want to include time -->
-	<?php if( eo_is_all_day() ){
-		$date_format = 'j F Y'; 
-	}else{
-		$date_format = 'j F Y ' . get_option('time_format'); 
-	} ?>
+	<?php 
+		if (eo_is_all_day()) {
+			$date_format = 'F jS, Y'; 
+		} else {
+			$date_format = 'F jS, Y - ' . get_option('time_format'); 
+		} 
+	?>
 	<hr>
 
 	<!-- Event details -->
@@ -38,11 +40,16 @@
 
 	<ul class="eo-event-meta">
 
-		<?php if( !eo_reoccurs() ){ ?>
-				<!-- Single event -->
-				<li><strong><?php _e('Start', 'eventorganiser') ;?>:</strong> <?php eo_the_start($date_format); ?> </li>
-				<?php
-		 } ?>
+		<?php 
+			if (!eo_reoccurs()) {
+				if (eo_is_all_day()) { ?>
+					<li><strong>Date:</strong> <?php eo_the_start($date_format); ?></li>
+				<?php } else { ?>
+					<li><strong>Start:</strong> <?php eo_the_start($date_format); ?></li>
+					<li><strong>End:</strong> <?php eo_the_end($date_format); ?></li>
+				<?php }
+			}
+		?>
 
 		<?php if( eo_get_venue() ){ 
 			$tax = get_taxonomy( 'event-venue' ); ?>

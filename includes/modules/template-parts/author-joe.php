@@ -14,7 +14,7 @@
 	<div class="staff-content">
 		<h2 class="staff-title"><?php echo $author->post_title; ?></h2>
 		<div class="staff-description">
-			<?php echo apply_filters('the_content', $author->post_content); ?>
+			<p>Joe Miller is the Executive Director for Souls Harbour Rescue Mission. After working in the manufacturing industry for many years, he felt called to move from 'building things' to 'building people.' He has a passion to see the people that walk through the Mission's doors, get the help they need; whatever their situation may be. He enjoys fishing and the outdoors and often finds God in the stillness of nature. He writes here his thoughts on poverty, society, faith, and his reflections on life.</p>
 		</div>
 	</div>
 	<div class="clearfix"></div>

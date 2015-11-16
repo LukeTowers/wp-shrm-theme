@@ -33,7 +33,10 @@
 				</div>
 			</div>
 		</div> <!-- .site_container -->
-		<?php wp_footer(); ?>
+		<?php 
+			do_action('footer_scripts');
+			wp_footer(); 
+		?>
 		<script type="text/javascript">
 			var _gaq = _gaq || [];
 			_gaq.push(['_setAccount', 'UA-17932908-1']);

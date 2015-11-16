@@ -83,38 +83,7 @@ if (!function_exists('display_pagination')) {
 	}	
 } ?>
 
-<style id="pagination-styles">
-	.pagination_container {
-		margin: 14px 0px 0px;
-	}
-	
-	.pagination {
-		padding: 0px;
-		margin: 0px;
-	}
-	
-	.pagination li {
-		background-image: none !important;
-		background-color: #333;
-		border-radius: 3px;
-	    color: white;
-	    display: inline-block;
-	    margin: 0px 10px 10px 0px;
-	}
-	
-	.pagination li > * {
-		color: white;
-		display: block;
-		padding: 8px 15px;
-		border-radius: 3px;
-	}
-	
-	.pagination a:hover,
-	.pagination .current {
-		color: #643B2B !important;
-		background-color: #C8BDA1;
-	}
-</style>
+<div class="clearfix"></div>
 
 <div class="pagination_container">
 	<?php display_pagination(); ?>

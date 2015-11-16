@@ -30,7 +30,7 @@
 					<div class="post-content">
 						<h2 class="post-title"><a href="<?php echo get_the_permalink(); ?>"><?php echo get_the_title(); ?></a></h2>
 						<div class="post-excerpt">
-							<?php the_excerpt(); ?>
+							<?php the_content(); ?>
 						</div>
 					</div>
 					<div class="clearfix"></div>

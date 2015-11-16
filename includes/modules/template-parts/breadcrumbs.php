@@ -25,7 +25,7 @@ if (!is_front_page()) {
 		$posttype_breadcrumbs = array(
 			'cup-of-joe'	=>	array(
 				'title'	=>	'Cup of Joe',
-				'url'	=>	'/cup-of-joe/'
+				'url'	=>	'/blog/cup-of-joe/'
 			),
 			'wtd'	=>	array(
 				'title'	=>	'Ways to Donate',
@@ -36,8 +36,8 @@ if (!is_front_page()) {
 				'url'	=>	'/about-us/media-room/'
 			),
 			'success-story'	=>	array(
-				'title'	=>	'Media Room',
-				'url'	=>	'/about-us/media-room/'
+				'title'	=>	'Success Stories',
+				'url'	=>	'/blog/success-stories/'
 			),
 			'event'			=>	array(
 				'title'	=>	'Events',

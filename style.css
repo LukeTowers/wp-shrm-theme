@@ -8,6 +8,17 @@ Template Prefix: SHRM_2016 (Souls Harbour Rescue Mission 2016)
 Version: 0.2
 =============================================================================================*/
 
+
+/*
+	
+	NOTE: BEFORE MINIFYING CSS AGAIN AFTER MAKING CHANGES, MAKE SURE TO REPLACE /includes/images
+	RESOURCE URLS TO ../images AS THE MINIFIED CSS FILE IS LOADED FROM /includes/css/
+	
+	ALSO NOTE THAT THIS FILE IS NOT LOADED ON THE SITE, style.min.css IN /includes/css/ IS INSTEAD.	
+	
+*/
+
+
 /******************************************************************************************************
 // Section: 		HTML Reset : normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css
 ******************************************************************************************************/
@@ -96,7 +107,7 @@ a {
 
 
 .site-header {
-    max-width: 1024px;
+    max-width: 1440px;
     margin: 0px auto;
     margin-bottom: 10px !important;
     padding-top: 10px;
@@ -129,7 +140,24 @@ a {
 }
 
 
-.navigation_container, .sub-menu { background-color: #C8BDA1; }
+.form-button {
+	display: block;
+	text-align: center;
+	font-size: 1.4em;
+}
+
+.blue-button {
+	display: inline-block;
+	padding: 7px 15px;
+	text-align: center;
+	border-radius: 7px;
+	color: white;
+	background-color: #0D6D97;
+	font-family: "abril-titling", sans-serif;
+}
+
+
+.navigation_container, .main-menu .sub-menu { background-color: #C8BDA1; }
 
 .mobile-menu-btn {
 	display: block;
@@ -177,7 +205,7 @@ a {
 .main-navigation {
 	display: none;
 	font-size: 1.3em;
-	max-width: 1024px;
+	max-width: 1440px;
 	margin: 0 auto;
 }
 
@@ -212,13 +240,13 @@ ul.main-menu {
 }
 
 
-.sub-menu {
+.main-menu .sub-menu {
 	display: none;
 	width: 100%;
 }
 
-.sub-menu li { display: block; }
-.sub-menu a { padding-left: 45px; }
+.main-menu .sub-menu li { display: block; }
+.main-menu .sub-menu a { padding-left: 45px; }
 
 
 .main-menu > li.menu-item-has-children > a:first-child {
@@ -235,28 +263,34 @@ ul.main-menu {
 	background-image: url("includes/images/menu-arrow-down.png");
 	background-repeat: no-repeat;
 	background-position: center center;
+/*
 	-moz-transition: transform 0.25s;
 	-webkit-transition: transform 0.25s;
 	transition: transform 0.25s;
+*/
 }
 .sub-menu-button.active { 
-/* 	background-image: url("includes/images/menu-arrow-up.png");  */
+	background-image: url("includes/images/menu-arrow-up.png"); 
+/*
 	-moz-transform: rotate(180deg);
 	-webkit-transform: rotate(180deg);
 	transform: rotate(180deg);
+*/
 }
 
 
 
 .shadow_container {
-	max-width: 1024px;
+	max-width: 1440px;
 	word-wrap: break-word;
 	margin: 0 auto;
 	position: relative;
 }
 
+
+
 .content_container {
-	padding: 7px 15px 30px;
+	padding: 7px 25px 30px;
 	background-color: white;
 }
 
@@ -282,6 +316,30 @@ ul.main-menu {
 
 .breadcrumbs.search-result { font-size: 0.65em; }
 .breadcrumbs.search-result a { color: #006C99; }
+
+
+
+.cost_info_container {
+	font-family: "abril-titling", sans-serif;
+	font-size: 3em;
+	font-weight: bold;
+	margin: 30px 0px;
+}
+
+.cost_info_container .three-column {
+    width: 100%;
+    text-align: center;
+    margin: 25px 0px;
+}
+
+.cost_info_container span,
+.cost_info_container a {
+	display: block;
+}
+
+.cost_info_container .item { font-size: 0.3em; }
+.cost_info_container .cost { text-shadow: 0px 0px 5px #9B9B9B; }
+
 
 .newsletter_container {
     background-color: #0D6D97;
@@ -355,7 +413,7 @@ ul.main-menu {
 
 .footer_column_container,
 .footer-credits .column_container {
-	max-width: 1024px;
+	max-width: 1440px;
 	margin: 0 auto;
 }
 
@@ -390,12 +448,29 @@ ul.main-menu {
 .footer-column-2-widget { text-align: left; }
 
 .social_media_container { 
-	margin-top: 20px;
+	margin: 50px 0px;
 	text-align: center;
 }
-.social_media_container h3 {
-	margin: 0px;
+
+.icon_container {
+	display: block;
+	width: 33%;
+	float: left;
 }
+
+.social-icon {
+	display: block;
+	margin: 0 auto;
+	width: 75px;
+	height: 75px;
+	background-position: center center;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.social-icon.facebook { background-image: url('includes/images/facebook.png'); }
+.social-icon.twitter { background-image: url('includes/images/twitter.png'); }
+.social-icon.youtube { background-image: url('includes/images/youtube.png'); }
 
 
 .privacy-policy,
@@ -415,6 +490,11 @@ ul.main-menu {
 .privacy-policy,
 .fusion-credits {
 	font-size: 1em;
+}
+
+.footer-links a { 
+	display: block;
+	margin: 15px 0px;
 }
 
 
@@ -441,10 +521,6 @@ ul.main-menu {
 	position: absolute;
 	right: 0px;
 	top: 0px;
-}
-
-.inline_search_container .search-form {
-	width: 100% !important;
 }
 
 .inline_search_container .search-input {
@@ -502,6 +578,20 @@ ul.main-menu {
 
 .page-events .breadcrumbs {
 	margin-bottom: 20px;
+}
+
+.page-events {
+	position: relative;
+}
+
+.event_selector_container { margin-bottom: 30px; }
+.event_selector_container label {
+	display: block;
+	text-align: center;
+	font-size: 1.4em;
+}
+.event_selector_container #events-to-show {
+	width: 100%;
 }
 
 .single-event .event-tickets {
@@ -581,8 +671,41 @@ ul.main-menu {
 .wtd-archive-title a { color: black; }
 
 
+
+.pagination_container {
+	margin: 14px 0px 0px;
+}
+
+.pagination {
+	padding: 0px;
+	margin: 0px;
+}
+
+.pagination li {
+	background-image: none !important;
+	background-color: #333;
+	border-radius: 3px;
+    color: white;
+    display: inline-block;
+    margin: 0px 10px 10px 0px;
+}
+
+.pagination li > * {
+	color: white;
+	display: block;
+	padding: 8px 15px;
+	border-radius: 3px;
+}
+
+.pagination a:hover,
+.pagination .current {
+	color: #643B2B !important;
+	background-color: #C8BDA1;
+}
+
+
 /* Mobile Breakpoints */
-@media only screen and (max-width: 1102px) {
+@media only screen and (max-width: 1540px/* 1102px */) {
 	.main-menu li:first-child:hover > .sub-menu {
 		left: 0px;
 		margin-left: 0px !important;
@@ -662,7 +785,7 @@ ul.main-menu {
 	
 	.main-menu li:hover > .sub-menu { display: block; }
 	
-	.sub-menu {
+	.main-menu .sub-menu {
 		position: absolute;
 		z-index: 99999;
 		left: 50%;
@@ -670,12 +793,34 @@ ul.main-menu {
 		width: 200px;
 	}
 	
-	.sub-menu a { padding-left: 12px; }
+	.main-menu .sub-menu a { padding-left: 12px; }
+	
+	.cost_info_container {
+		font-size: 5em;
+	}
+	.cost_info_container .three-column {
+		margin: 50px 0px;
+	}
 	
 	.contact-info-box {
 		float: left;
 		width: 33%;
 		margin: 0px;
+	}
+	
+	.event_selector_container {
+		position: absolute;
+		top: 20px;
+		right: 20px;
+		text-align: right;
+		margin-bottom: 0px;
+	}
+	.event_selector_container label {
+		display: inline;
+		font-size: 1em;
+	}
+	.event_selector_container #events-to-show {
+		width: auto;
 	}
 }
 
@@ -683,25 +828,18 @@ ul.main-menu {
 	.post_container,
 	.staff_container {
 		text-align: left;
-		
-		display: -ms-flexbox;
-		display: -webkit-flex;
-		display: flex;
-		-ms-flex-align: center;
-		-webkit-align-items: center;
-		-webkit-box-align: center;
-		align-items: center;
+		display: table;
 	}
 	
-	.post_container .post-picture {
-		float: left;
-		margin-right: 30px;
+	.post_container > div,
+	.staff_container > div {
+		display: table-cell;
+		vertical-align: middle;
 	}
 	
-	
-	.staff_container .staff-picture {
-		float: left;
-		margin-right: 30px;
+	.post_container .post-picture,
+	.staff_container .staff-picture{
+		padding-right: 30px;
 	}
 	
 	.single-staff .staff-picture {
@@ -757,6 +895,14 @@ ul.main-menu {
 	}
 }
 
+@media only screen and (min-width: 900px) {
+	.cost_info_container .three-column {
+		float: left;
+		width: 33.3%;
+		margin: 0px !important;
+	}
+}
+
 @media only screen and (min-width: 988px) {
 	.main-navigation {
 		font-size: 1em;
@@ -773,33 +919,30 @@ ul.main-menu {
 	}
 }
 
-
-/* Large Display Breakpoint */
-@media only screen and (min-width: 1124px) {
-	.site-header,
-	.main-navigation,
-	.shadow_container,
-	.footer_column_container,
-	.footer-credits .column_container {
-		max-width: 100%;
-		margin: 0px 5%;
-	}
-}
-
 @media only screen and (min-width: 1400px) {
 	.event_container {
 		width: 23%;
 	}
 }
 
-@media only screen and (min-width: 1800px) {
-	.main-menu > li {
-		width: 12.5%;
+@media only screen and (min-width: 1440px) {
+	.shadow_container:before {
+		box-shadow: -10px 0 13px -15px inset;
+		content: " ";
+		height: 100%;
+		position: absolute;
+		left: -15px;
+		top: 0;
+		width: 15px;
 	}
-}
-
-@media only screen and (min-width: 2100px) {
-	.event_container {
-		width: 18%;
+	
+	.shadow_container:after {
+		box-shadow: 10px 0 13px -15px inset;
+		content: " ";
+		height: 100%;
+		position: absolute;
+		right: -15px;
+		top: 0;
+		width: 15px;
 	}
 }

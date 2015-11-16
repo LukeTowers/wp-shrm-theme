@@ -12,7 +12,8 @@ add_theme_support('menus');
 function register_theme_menus() {
   register_nav_menus(
     array(
-      'main-menu' => 'Main Menu',
+      'main-menu'	=> 'Main Menu',
+      'sitemap'		=>	'Sitemap',
     )
   );
 }

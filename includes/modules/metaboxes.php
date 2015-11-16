@@ -29,7 +29,11 @@ function render_tickets_url_metabox($post) {
 
 function save_tickets_url($event_id) {
 	if (!empty($_POST['ticket_url'])) {
-		update_post_meta($event_id, 'ticket_url', $_POST['ticket_url']);
+		$new_ticket_url = $_POST['ticket_url'];
+	} else {
+		$new_ticket_url = '';
 	}
+	
+	update_post_meta($event_id, 'ticket_url', $new_ticket_url);
 }
 add_action('save_post_event', 'save_tickets_url');

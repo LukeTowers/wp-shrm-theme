@@ -31,14 +31,11 @@ get_header(); ?>
 			
 			$eventQuery = new WP_Query($eventArgs);
 		?>
-		<style>
-			.event_selector_container { margin-bottom: 20px; }
-		</style>
 		<div class="event_selector_container">
 			<label for="events-to-show">Display&nbsp;</label>
 			<select name="events-to-show" id="events-to-show">
-				<option value="<?php echo esc_url(add_query_arg('event-type', 'upcoming')); ?>" <?php selected($events_to_display, 'upcoming'); ?>>Upcoming Events</option>
-				<option value="<?php echo esc_url(add_query_arg('event-type', 'past')); ?>" <?php selected($events_to_display, 'past'); ?>>Past Events</option>
+				<option value="<?php echo esc_url(add_query_arg('event-type', 'upcoming', get_the_permalink())); ?>" <?php selected($events_to_display, 'upcoming'); ?>>Upcoming Events</option>
+				<option value="<?php echo esc_url(add_query_arg('event-type', 'past', get_the_permalink())); ?>" <?php selected($events_to_display, 'past'); ?>>Past Events</option>
 			</select>
 			<script>
 				document.getElementById("events-to-show").onchange = function() {

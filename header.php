@@ -4,12 +4,7 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		
-		<title>
-			<?php
-				wp_title(' - ',true,'right');
-				bloginfo('name');
-			?>
-		</title>
+		<title><?php wp_title(' - ',true,'right'); bloginfo('name'); ?></title>
 		
 		<?php
 			do_action('header_scripts');
@@ -26,7 +21,7 @@
 					</a>
 				</div>
 				<div class="header-right">
-					<a href="http://donate.shrmsk.com/" target="_blank" class="donate-button">DONATE</a>
+					<a href="/get-involved/donate/donate-form/" target="_blank" class="donate-button">DONATE</a>
 				</div>
 				<div class="clearfix"></div>
 			</div>
@@ -83,12 +78,19 @@
 			</div>
 			
 			<?php
-				if (is_front_page()) {
+			/*
+	if (is_front_page()) {
 					dynamic_sidebar('home-slider-area');
 				}
+*/
 			?>
 			
 			<div class="shadow_container">
+				<?php
+					if (is_front_page()) {
+						dynamic_sidebar('home-slider-area');
+					}
+				?>
 				<?php
 					if (!is_front_page()) {
 						get_template_component('header-image');

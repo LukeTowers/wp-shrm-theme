@@ -20,7 +20,7 @@
 				$wtd_args = array(
 					'post_type'			=>	'wtd',
 					'post_status'		=>	'publish',
-					'posts_per_page'	=>	3,
+					'posts_per_page'	=>	6,
 					'order'				=>	'DESC',
 					'paged'				=>	$paged,
 				);
