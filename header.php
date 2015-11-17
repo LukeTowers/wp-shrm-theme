@@ -7,8 +7,8 @@
 		<title><?php wp_title(' - ',true,'right'); bloginfo('name'); ?></title>
 		
 		<?php
+			wp_head();
 			do_action('header_scripts');
-			wp_head(); 
 		?>
 	</head>
 	
@@ -21,7 +21,7 @@
 					</a>
 				</div>
 				<div class="header-right">
-					<a href="/get-involved/donate/donate-form/" target="_blank" class="donate-button">DONATE</a>
+					<a href="/get-involved/donate/donate-form/?utm_source=internal&utm_medium=button&utm_content=Header%20Donate%20Lock&utm_campaign=2015-11-17" target="_blank" class="donate-button">DONATE</a>
 				</div>
 				<div class="clearfix"></div>
 			</div>
@@ -78,21 +78,8 @@
 			</div>
 			
 			<?php
-			/*
-	if (is_front_page()) {
-					dynamic_sidebar('home-slider-area');
-				}
-*/
+			/* if (is_front_page()) { dynamic_sidebar('home-slider-area'); */
 			?>
 			
 			<div class="shadow_container">
-				<?php
-					if (is_front_page()) {
-						dynamic_sidebar('home-slider-area');
-					}
-				?>
-				<?php
-					if (!is_front_page()) {
-						get_template_component('header-image');
-					}
-				?>
+				<?php if (!is_front_page()) { get_template_component('header-image'); } ?>

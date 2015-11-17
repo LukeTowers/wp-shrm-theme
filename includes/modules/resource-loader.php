@@ -32,6 +32,7 @@ add_filter('mce_external_plugins', 'shrm_typekit_mce_plugin');
 // Add the theme styles to <head>
 function initialize_theme_styles() {
 	wp_enqueue_style('main', SHRM_2016_TEMPLATE_URL . '/includes/css/style.min.css');
+// 	wp_enqueue_style('main', SHRM_2016_TEMPLATE_URL . '/style.css');
 	global $stylesheets;
 	if (!empty($stylesheets)) {
 		foreach ($stylesheets as $stylesheet) {
@@ -58,6 +59,12 @@ function add_typekit_fonts() {
 }
 add_action('footer_scripts', 'add_typekit_fonts');
 add_action('admin_head', 'add_typekit_fonts');
+
+
+function add_theme_icons() {
+	echo file_get_contents(SHRM_2016_TEMPLATE_PATH . '/includes/modules/theme-icons.txt');
+}
+add_action('header_scripts', 'add_theme_icons');
 
 
 // Remove jquery.migrate.js from site

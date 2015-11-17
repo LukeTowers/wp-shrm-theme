@@ -31,6 +31,7 @@ get_header(); ?>
 			
 			$eventQuery = new WP_Query($eventArgs);
 		?>
+        <?php /*
 		<div class="event_selector_container">
 			<label for="events-to-show">Display&nbsp;</label>
 			<select name="events-to-show" id="events-to-show">
@@ -42,7 +43,7 @@ get_header(); ?>
 					window.location.href = this.value;
 				};
 			</script>
-		</div>
+		</div>*/ ?>
 		<?php if ($eventQuery->have_posts()) : while ($eventQuery->have_posts()) : $eventQuery->the_post(); ?>
 			<div class="event_container">
 				<div class="event-picture">
@@ -69,13 +70,13 @@ get_header(); ?>
 							eo_the_start($format);
 						?>
 					</span>
-					<?php
+					<?php /*
 						$tickets_url = get_post_meta(get_the_ID(), 'ticket_url', true);
 						if (!empty($tickets_url)) {
 							echo '<a href="' . $tickets_url . '" class="event-tickets" target="_blank">Get Tickets</a>';
-						}
+						}*/
 					?>
-					<a href="<?php the_permalink(); ?>" class="event-more-info">Find Out More</a>
+					<?php /*<a href="<?php the_permalink(); ?>" class="event-more-info">Find Out More</a>*/?>
 				</div>
 			</div>
 		<?php endwhile; else: ?>

@@ -1,0 +1,23 @@
+<link rel="apple-touch-icon" sizes="57x57" href="/wp-content/themes/shrm-2016/includes/icons/apple-touch-icon-57x57.png?v=new">
+<link rel="apple-touch-icon" sizes="60x60" href="/wp-content/themes/shrm-2016/includes/icons/apple-touch-icon-60x60.png?v=new">
+<link rel="apple-touch-icon" sizes="72x72" href="/wp-content/themes/shrm-2016/includes/icons/apple-touch-icon-72x72.png?v=new">
+<link rel="apple-touch-icon" sizes="76x76" href="/wp-content/themes/shrm-2016/includes/icons/apple-touch-icon-76x76.png?v=new">
+<link rel="apple-touch-icon" sizes="114x114" href="/wp-content/themes/shrm-2016/includes/icons/apple-touch-icon-114x114.png?v=new">
+<link rel="apple-touch-icon" sizes="120x120" href="/wp-content/themes/shrm-2016/includes/icons/apple-touch-icon-120x120.png?v=new">
+<link rel="apple-touch-icon" sizes="144x144" href="/wp-content/themes/shrm-2016/includes/icons/apple-touch-icon-144x144.png?v=new">
+<link rel="apple-touch-icon" sizes="152x152" href="/wp-content/themes/shrm-2016/includes/icons/apple-touch-icon-152x152.png?v=new">
+<link rel="apple-touch-icon" sizes="180x180" href="/wp-content/themes/shrm-2016/includes/icons/apple-touch-icon-180x180.png?v=new">
+<link rel="icon" type="image/png" href="/wp-content/themes/shrm-2016/includes/icons/favicon-32x32.png?v=new" sizes="32x32">
+<link rel="icon" type="image/png" href="/wp-content/themes/shrm-2016/includes/icons/favicon-194x194.png?v=new" sizes="194x194">
+<link rel="icon" type="image/png" href="/wp-content/themes/shrm-2016/includes/icons/favicon-96x96.png?v=new" sizes="96x96">
+<link rel="icon" type="image/png" href="/wp-content/themes/shrm-2016/includes/icons/android-chrome-192x192.png?v=new" sizes="192x192">
+<link rel="icon" type="image/png" href="/wp-content/themes/shrm-2016/includes/icons/favicon-16x16.png?v=new" sizes="16x16">
+<link rel="manifest" href="/wp-content/themes/shrm-2016/includes/icons/manifest.json?v=new">
+<link rel="mask-icon" href="/wp-content/themes/shrm-2016/includes/icons/safari-pinned-tab.svg?v=new" color="#ca0714">
+<link rel="shortcut icon" href="/wp-content/themes/shrm-2016/includes/icons/favicon.ico?v=new">
+<meta name="apple-mobile-web-app-title" content="SHRM">
+<meta name="application-name" content="SHRM">
+<meta name="msapplication-TileColor" content="#ca0714">
+<meta name="msapplication-TileImage" content="/wp-content/themes/shrm-2016/includes/icons/mstile-144x144.png?v=new">
+<meta name="msapplication-config" content="/wp-content/themes/shrm-2016/includes/icons/browserconfig.xml?v=new">
+<meta name="theme-color" content="#ca0714">

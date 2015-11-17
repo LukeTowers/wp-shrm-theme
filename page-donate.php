@@ -11,7 +11,7 @@
 			endif;
 		?>
 		
-		<hr class="wtd-archive-line">
+		<!-- <hr class="wtd-archive-line"> -->
 		
 		<div class="page-ways-to-donate">
 			<?php
@@ -28,7 +28,7 @@
 				$wtd_query = new WP_Query($wtd_args);
 			?>
 			
-			<h2 class="wtd-archive-title"><a href="/get-involved/donate/ways-to-donate">Ways to Donate</a></h2>
+<!-- 			<h2 class="wtd-archive-title"><a href="/get-involved/donate/ways-to-donate">Ways to Donate</a></h2> -->
 			
 			<?php if ($wtd_query->have_posts()) : while ($wtd_query->have_posts()) : $wtd_query->the_post(); ?>
 				<div class="post_container">

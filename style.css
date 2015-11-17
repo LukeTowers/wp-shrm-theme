@@ -5,7 +5,7 @@ Author: Fusion Online
 Author URI: http://fusiononline.ca
 Description: This is a responsive theme designed for Souls Harbour Rescue Mission. Non-authorized use prohibited.
 Template Prefix: SHRM_2016 (Souls Harbour Rescue Mission 2016)
-Version: 0.2
+Version: 1.0
 =============================================================================================*/
 
 
@@ -36,6 +36,7 @@ input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointe
 .aligncenter,div.aligncenter{display:block;margin:5px auto}
 .alignright{float:right;margin:5px 0 20px 20px}
 .alignleft{float:left;margin:5px 20px 20px 0}
+.iframe.alignleft{width: 100%; margin: 5px 0px 20px 0px; }
 a img.alignright{float:right;margin:5px 0 20px 20px}
 a img.alignnone{margin:5px 20px 20px 0}
 a img.alignleft{float:left;margin:5px 20px 20px 0}
@@ -83,11 +84,13 @@ hr {
 	margin: 10px 1% !important;
 }
 
+.gallery-caption { margin-left: 0px; }
 
 
 .clearfix { clear: both; }
 
 .hidden-text { display: none; }
+.hide-on-mobile { display: none; }
 
 img { max-width: 100% !important; height: auto !important; }
 
@@ -294,6 +297,11 @@ ul.main-menu {
 	background-color: white;
 }
 
+.content_container-home {
+	padding: 7px 25px 30px;
+	background-color: #643B2B;;
+}
+
 
 .breadcrumbs .seperator {
 	display: inline-block;
@@ -326,6 +334,12 @@ ul.main-menu {
 	margin: 30px 0px;
 }
 
+/*.cost_info_container a {
+	//color: #643B2B; brown
+	//color: black;
+	//color: #C8BDA1;
+}*/
+
 .cost_info_container .three-column {
     width: 100%;
     text-align: center;
@@ -337,7 +351,7 @@ ul.main-menu {
 	display: block;
 }
 
-.cost_info_container .item { font-size: 0.3em; }
+.cost_info_container .item { font-size: 0.3em; color: #643B2B; }
 .cost_info_container .cost { text-shadow: 0px 0px 5px #9B9B9B; }
 
 
@@ -636,7 +650,7 @@ ul.main-menu {
 
 .event-title {
 	margin: 0px auto;
-	width: 210px;
+	width: 200px;
 }
 
 .event-title a {
@@ -654,7 +668,7 @@ ul.main-menu {
 }
 
 .event-details {
-	min-height: 200px;
+	min-height: 100px;
 }
 
 
@@ -754,6 +768,12 @@ ul.main-menu {
 	    float: left;
 	    margin: 0;
 	}
+	
+	.hide-on-desktop { display: none; }
+	.hide-on-mobile { display: initial; }
+	
+	
+	.iframe.alignleft{width: auto; margin: 5px 20px 20px 0px; }
 	
 	.donate-button {
 		float: right;

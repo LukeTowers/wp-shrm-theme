@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<browserconfig>
+  <msapplication>
+    <tile>
+      <square70x70logo src="/wp-content/themes/shrm-2016/includes/icons/mstile-70x70.png?v=new"/>
+      <square150x150logo src="/wp-content/themes/shrm-2016/includes/icons/mstile-150x150.png?v=new"/>
+      <square310x310logo src="/wp-content/themes/shrm-2016/includes/icons/mstile-310x310.png?v=new"/>
+      <wide310x150logo src="/wp-content/themes/shrm-2016/includes/icons/mstile-310x150.png?v=new"/>
+      <TileColor>#ca0714</TileColor>
+    </tile>
+  </msapplication>
+</browserconfig>
