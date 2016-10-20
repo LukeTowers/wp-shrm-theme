@@ -8,7 +8,7 @@
 				
 				// Create the script that loads the typekit resource
 				var typekit_source = doc.createElement("script");
-				typekit_source.src = "https://use.typekit.net/qlu1hyf.js";
+				typekit_source.src = "https://use.typekit.net/tzy2gqj.js";
 				
 				// Add the typekit id script to the header
 				doc.getElementsByTagName('head')[0].appendChild(typekit_source);
@@ -27,9 +27,9 @@
 		getInfo: function() {
 			return {
 				longname: 'SHRM TypeKit For TinyMCE',
-				author: 'Fusion Online',
-				authorurl: 'http://fusiononline.ca/',
-				infourl: 'http://fusiononline.ca/',
+				author: 'Look Agency',
+				authorurl: 'https://www.lookagency.com/',
+				infourl: 'https://www.shrmsk.com',
 				version: "1.0"
 			};
 		}

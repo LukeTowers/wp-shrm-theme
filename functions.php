@@ -1,12 +1,12 @@
 <?php
 /*
 Theme Name: SHRM 2016
-Theme URI: http://dev.shrsmk.com
-Author: Fusion Online
-Author URI: http://fusiononline.ca
+Theme URI: https://www.shrsmk.com/
+Author: Look Agency
+Author URI: https://www.lookagency.com/
 Description: This is a responsive theme designed for Souls Harbour Rescue Mission. Non-authorized use prohibited.
 Template Prefix: SHRM_2016 (Souls Harbour Rescue Mission 2016)
-Version: 0.1
+Version: 1.0
 */
 
 //************************************************************************************************
