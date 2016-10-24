@@ -47,7 +47,7 @@ add_action('wp_enqueue_scripts','initialize_theme_styles');
 // Add the front-end theme scripts to <head>
 function initialize_theme_scripts() {
 	wp_enqueue_script('jquery');
-	wp_enqueue_script('jquerymenutoggle', SHRM_2016_TEMPLATE_URL . '/includes/js/jquery.menutoggle.js', array('jquery'), '1.0', false);
+// 	wp_enqueue_script('jquerymenutoggle', SHRM_2016_TEMPLATE_URL . '/includes/js/jquery.menutoggle.js', array('jquery'), '1.0', false);
 }
 add_action('wp_enqueue_scripts','initialize_theme_scripts', 1);
 

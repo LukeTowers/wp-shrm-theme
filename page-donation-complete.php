@@ -18,7 +18,7 @@
 				$donation_type = @$_GET['donation'];
 				
 				if (!empty($id) && !empty($total) && !empty($donation_type)) { ?>
-					<a class="twitter-share-button" href="https://twitter.com/share" data-url="http://www.shrmsk.com/" data-text="I just donated to Souls Harbour Rescue Mission!" data-via="souls_harbour" data-size="large" data-count="none">Tweet</a>
+					<a class="twitter-share-button" href="https://twitter.com/share" data-url="https://www.shrmsk.com/" data-text="I just donated to Souls Harbour Rescue Mission!" data-via="souls_harbour" data-size="large" data-count="none">Tweet</a>
 					<script>
 						!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
 					</script>

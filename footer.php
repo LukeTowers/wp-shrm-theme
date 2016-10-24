@@ -26,7 +26,7 @@
 							<span>&copy; <?php echo date('Y'); ?> Souls Harbour Rescue Mission</span>
 						</div>
 						<div class="footer-column fusion-credits">
-							<a href="http://fusiononline.ca/" target="_blank">Developed by Fusion Online</a>
+							<a href="https://www.lookagency.com/" target="_blank">Website by Look Agency</a>
 						</div>
 						<div class="clearfix"></div>
 					</div>

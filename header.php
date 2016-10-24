@@ -21,11 +21,25 @@
 					</a>
 				</div>
 				<div class="header-right">
-					<a href="/get-involved/donate/donate-form/?utm_source=internal&utm_medium=button&utm_content=Header%20Donate%20Lock&utm_campaign=2015-11-17" target="_blank" class="donate-button">DONATE</a>
+					<a href="https://donate.shrmsk.com" target="_blank" class="donate-button">DONATE</a>
 				</div>
 				<div class="clearfix"></div>
 			</div>
 			<div class="navigation_container">
+				<script type="text/javascript">
+					jQuery(document).ready(function() {
+					    jQuery('.mobile-menu-btn').click(function() {
+					            jQuery('.main-navigation').slideToggle("fast");
+					            jQuery('.mobile-menu-btn').toggleClass('on');
+					    });
+					    
+					    jQuery('.sub-menu-button').click(function() {
+					            jQuery(this).next().next().slideToggle("fast");
+					            jQuery(this).toggleClass('active');
+					    });
+					});
+				</script>
+				
 				<div id="menu-button">
 					<a class="mobile-menu-btn" href="#">
 						<div class="menu-btn-bar-container">

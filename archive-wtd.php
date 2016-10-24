@@ -5,7 +5,7 @@
 				get_template_component('breadcrumbs', array(
 					'breadcrumb-override'	=>	array(
 						'title'	=>	'Ways to Donate',
-						'url'	=>	'/get-involved/donate/ways-to-donate/',
+						'url'	=>	'https://donate.shrmsk.com/',
 						'parent'=>	array(
 							'title'	=>	'Donate',
 							'url'	=>	'/get-involved/donate/',
