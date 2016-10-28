@@ -60,7 +60,7 @@ function add_newsletter_subscriber($email) {
 	
 	// Setup values for accessing backend components
 	$form_id = 1;
-	$feed_id = 1;
+	$feed_id = 9;
 	$email_field_id = 2;
 	$cm_slug = 'gravityformscampaignmonitor';
 	$cm_path = WP_PLUGIN_DIR . '/' . $cm_slug . '/class-gf-campaignmonitor.php';
