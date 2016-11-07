@@ -19,7 +19,7 @@ add_theme_support('google-analytics');
 add_theme_support('google-tag-manager');
 
 // Enable favicons and specify the location to the file containing the favicon meta tags for echoing in <head>
-add_theme_support('favicons', SHRM_2016_TEMPLATE_URL . '/includes/icons/icons.html');
+add_theme_support('favicons', SHRM_2016_TEMPLATE_PATH . '/includes/icons/icons.html');
 
 //Enable custom navigation menus
 add_theme_support('menus');
