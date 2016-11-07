@@ -6,6 +6,21 @@
 
 add_theme_support('post-thumbnails');
 
+// Enable the seo metabox on Pages & Posts
+add_theme_support('seo-metabox', array('page', 'post'));
+
+// Enable Typekit embeds
+add_theme_support('typekit');
+
+// Enable Google Analytics
+add_theme_support('google-analytics');
+
+// Enable Google Tag Manager
+add_theme_support('google-tag-manager');
+
+// Enable favicons and specify the location to the file containing the favicon meta tags for echoing in <head>
+add_theme_support('favicons', SHRM_2016_TEMPLATE_URL . '/includes/icons/icons.html');
+
 //Enable custom navigation menus
 add_theme_support('menus');
 

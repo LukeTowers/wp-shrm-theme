@@ -53,20 +53,6 @@ add_action('wp_enqueue_scripts','initialize_theme_scripts', 1);
 
 
 
-function add_typekit_fonts() {
-	echo '<script src="https://use.typekit.net/tzy2gqj.js"></script>';
-	echo '<script>try{Typekit.load({ async: true });}catch(e){}</script>';
-}
-add_action('footer_scripts', 'add_typekit_fonts');
-add_action('admin_head', 'add_typekit_fonts');
-
-
-function add_theme_icons() {
-	echo file_get_contents(SHRM_2016_TEMPLATE_PATH . '/includes/modules/theme-icons.txt');
-}
-add_action('header_scripts', 'add_theme_icons');
-
-
 // Remove jquery.migrate.js from site
 add_filter('wp_default_scripts', 'dequeue_jquery_migrate');
 function dequeue_jquery_migrate( &$scripts){

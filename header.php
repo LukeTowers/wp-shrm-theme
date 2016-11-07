@@ -1,15 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
 		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		
 		<title><?php wp_title(' - ',true,'right'); bloginfo('name'); ?></title>
 		
-		<?php
-			wp_head();
-			do_action('header_scripts');
-		?>
+		<?php wp_head(); ?>
 	</head>
 	
 	<body>
@@ -29,13 +26,13 @@
 				<script type="text/javascript">
 					jQuery(document).ready(function() {
 					    jQuery('.mobile-menu-btn').click(function() {
-					            jQuery('.main-navigation').slideToggle("fast");
-					            jQuery('.mobile-menu-btn').toggleClass('on');
+				            jQuery('.main-navigation').slideToggle("fast");
+				            jQuery('.mobile-menu-btn').toggleClass('on');
 					    });
 					    
 					    jQuery('.sub-menu-button').click(function() {
-					            jQuery(this).next().next().slideToggle("fast");
-					            jQuery(this).toggleClass('active');
+				            jQuery(this).next().next().slideToggle("fast");
+				            jQuery(this).toggleClass('active');
 					    });
 					});
 				</script>
