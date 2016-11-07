@@ -7,7 +7,7 @@
 add_theme_support('post-thumbnails');
 
 // Enable the seo metabox on Pages & Posts
-add_theme_support('seo-metabox', array('page', 'post'));
+add_theme_support('seo-metabox', array('page', 'post', 'cup-of-joe', 'wtd', 'media-item', 'success-story', 'staff'));
 
 // Enable Typekit embeds
 add_theme_support('typekit');
