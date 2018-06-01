@@ -26,7 +26,7 @@
 							<span>&copy; <?php echo date('Y'); ?> Souls Harbour Rescue Mission</span>
 						</div>
 						<div class="footer-column fusion-credits">
-							<a href="https://www.lookagency.com/" target="_blank">Website by Look Agency</a>
+							<a href="https://luketowers.ca" target="_blank">Website by Luke Towers Consulting</a>
 						</div>
 						<div class="clearfix"></div>
 					</div>
